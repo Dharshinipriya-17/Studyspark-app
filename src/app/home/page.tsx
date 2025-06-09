@@ -19,7 +19,7 @@ export default function HomePage() {
 
       <h2 style={{ marginTop: '2rem', color: '#34495e' }}>🚀 Start Your Journey</h2>
       <p>
-        Whether you're preparing for exams or learning something new, StudySpark is here to make it easier and more effective.
+        Whether you&apos;re preparing for exams or learning something new, StudySpark is here to make it easier and more effective.
       </p>
     </div>
   );
