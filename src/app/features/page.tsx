@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import React from 'react';
 
 export default function FeaturesPage() {
   const features = [
@@ -51,7 +52,7 @@ export default function FeaturesPage() {
   );
 }
 
-const styles = {
+const styles: Record<string, React.CSSProperties> = {
   container: {
     fontFamily: 'Poppins, sans-serif',
     background: '#0a192f',
@@ -60,30 +61,47 @@ const styles = {
     paddingBottom: '50px',
   },
   nav: {
-    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-    padding: '20px 50px', borderBottom: '1px solid #1c2c44',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '20px 50px',
+    borderBottom: '1px solid #1c2c44',
   },
   logo: {
-    fontSize: '1.8rem', fontWeight: 'bold', color: '#64ffda',
+    fontSize: '1.8rem',
+    fontWeight: 'bold',
+    color: '#64ffda',
   },
   navLinks: {
-    display: 'flex', gap: '30px',
+    display: 'flex',
+    gap: '30px',
   },
   link: {
-    textDecoration: 'none', color: '#f0f4f8', fontSize: '1rem',
+    textDecoration: 'none',
+    color: '#f0f4f8',
+    fontSize: '1rem',
   },
   signin: {
-    textDecoration: 'none', backgroundColor: '#64ffda', color: '#0a192f',
-    padding: '8px 16px', borderRadius: '20px', fontWeight: 'bold',
+    textDecoration: 'none',
+    backgroundColor: '#64ffda',
+    color: '#0a192f',
+    padding: '8px 16px',
+    borderRadius: '20px',
+    fontWeight: 'bold',
   },
   main: {
-    textAlign: 'center', padding: '80px 30px 30px 30px',
+    textAlign: 'center',
+    padding: '80px 30px 30px 30px',
   },
   heading: {
-    fontSize: '2.6rem', fontWeight: 700, marginBottom: '10px',
+    fontSize: '2.6rem',
+    fontWeight: 700,
+    marginBottom: '10px',
   },
   subtext: {
-    fontSize: '1.2rem', color: '#cbd5e0', marginBottom: '50px',
+    fontSize: '1.2rem',
+    color: '#cbd5e0',
+    marginBottom: '50px',
   },
   grid: {
     display: 'grid',
@@ -92,19 +110,22 @@ const styles = {
     padding: '0 50px',
   },
   card: {
-    background: '#112240',
+    backgroundColor: '#112240',
     padding: '30px',
-    borderRadius: '20px',
-    textAlign: 'left',
-    cursor: 'pointer',
+    borderRadius: '12px',
+    textAlign: 'center',
   },
   emoji: {
-    fontSize: '2rem', marginBottom: '12px',
+    fontSize: '2rem',
+    marginBottom: '10px',
   },
   cardTitle: {
-    fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '10px', color: '#64ffda',
+    fontSize: '1.4rem',
+    fontWeight: 600,
+    marginBottom: '10px',
   },
   cardDesc: {
-    fontSize: '1rem', color: '#cbd5e0',
+    fontSize: '1rem',
+    color: '#cbd5e0',
   },
 };
