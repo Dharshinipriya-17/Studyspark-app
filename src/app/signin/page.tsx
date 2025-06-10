@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 
 export default function SignInPage() {
   return (
@@ -23,7 +24,7 @@ export default function SignInPage() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   container: { background: '#0a192f', color: '#f0f4f8', minHeight: '100vh', fontFamily: 'Poppins, sans-serif', padding: '20px' },
   nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
   logo: { fontSize: '1.8rem', color: '#64ffda' },
