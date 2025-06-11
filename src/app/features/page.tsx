@@ -15,7 +15,7 @@ const features = [
 export default function FeaturesPage() {
   return (
     <div style={{ background: '#0a192f', color: '#f0f4f8', minHeight: '100vh' }}>
-      <Navbar showsignin={true} />
+      
 
       <main style={{ textAlign: 'center', padding: '60px 30px' }}>
         <h2 style={{ fontSize: '2.6rem', marginBottom: '20px' }}>
