@@ -14,11 +14,11 @@ const features = [
 
 export default function FeaturesPage() {
   return (
-    <div style={{ background: '#0a192f', color: '#f0f4f8', minHeight: '100vh' }}>
-      
+    <div style={{ background: '#0a192f', color: '#f0f4f8', minHeight: '100vh', fontFamily: 'Poppins, sans-serif' }}>
+      <Navbar showSignIn={true} />
 
-      <main style={{ textAlign: 'center', padding: '60px 30px' }}>
-        <h2 style={{ fontSize: '2.6rem', marginBottom: '20px' }}>
+      <main style={{ textAlign: 'center', padding: '80px 30px 60px' }}>
+        <h2 style={{ fontSize: '2.6rem', marginBottom: '20px', color: '#64ffda' }}>
           Explore Our Ultra Smart Features
         </h2>
         <p style={{ fontSize: '1.2rem', marginBottom: '50px', color: '#cbd5e0' }}>
