@@ -48,7 +48,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   navLink: {
     color: 'white',
     textDecoration: 'none',
-    fontWeight: '600',
+    fontWeight: '601',
   },
   signInButton: {
     backgroundColor: '#64ffda',
