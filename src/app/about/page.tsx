@@ -1,3 +1,4 @@
+// app/about/page.tsx
 'use client';
 import Link from 'next/link';
 import React from 'react';
@@ -12,13 +13,14 @@ export default function AboutPage() {
           <li><Link href="/features" style={styles.navLink}>Features</Link></li>
           <li><Link href="/contact" style={styles.navLink}>Contact</Link></li>
         </ul>
+        <Link href="/signin" style={styles.signInButton}>Sign In</Link>
       </nav>
 
       <section style={styles.section}>
-        <h2 style={styles.title}>About StudySpark</h2>
-        <p style={styles.description}>
-          StudySpark helps students create effective study schedules based on their exam dates and topics.
-          Our goal is to help students plan smarter, not harder.
+        <h2 style={styles.title}>📘 About StudySpark</h2>
+        <p style={styles.text}>
+          StudySpark is your personal study planner. We help students prepare smarter
+          by offering personalized study schedules based on your goals and time.
         </p>
       </section>
     </div>
@@ -28,9 +30,10 @@ export default function AboutPage() {
 const styles: { [key: string]: React.CSSProperties } = {
   container: {
     fontFamily: 'Poppins, sans-serif',
-    minHeight: '100vh',
     backgroundColor: '#0a192f',
     color: 'white',
+    minHeight: '100vh',
+    paddingBottom: '40px',
   },
   nav: {
     display: 'flex',
@@ -56,19 +59,28 @@ const styles: { [key: string]: React.CSSProperties } = {
     textDecoration: 'none',
     fontWeight: '600',
   },
+  signInButton: {
+    backgroundColor: '#64ffda',
+    color: '#0a192f',
+    padding: '10px 20px',
+    borderRadius: '25px',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+  },
   section: {
     maxWidth: '700px',
-    margin: '80px auto',
-    padding: '0 20px',
+    margin: '60px auto',
     textAlign: 'center',
+    padding: '0 20px',
   },
   title: {
     fontSize: '2.5rem',
     fontWeight: 800,
     marginBottom: '20px',
   },
-  description: {
-    fontSize: '1.1rem',
+  text: {
+    fontSize: '1.2rem',
     color: '#b0bec5',
+    lineHeight: 1.6,
   },
 };
