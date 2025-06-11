@@ -1,48 +1,40 @@
-'use client';
+// app/components/FeatureCard.tsx
 import React from 'react';
 
-interface FeatureCardProps {
+type Props = {
   emoji: string;
   title: string;
   description: string;
-}
+};
 
-export default function FeatureCard({ emoji, title, description }: FeatureCardProps) {
+export default function FeatureCard({ emoji, title, description }: Props) {
   return (
-    <div style={styles.card} className="feature-card">
-      <div style={styles.emoji}>{emoji}</div>
+    <div style={styles.card}>
+      <span style={styles.emoji}>{emoji}</span>
       <h3 style={styles.title}>{title}</h3>
-      <p style={styles.description}>{description}</p>
-      <style jsx>{`
-        .feature-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 12px 24px rgba(100, 255, 218, 0.2);
-        }
-      `}</style>
+      <p style={styles.desc}>{description}</p>
     </div>
   );
 }
 
-const styles: Record<string, React.CSSProperties> = {
+const styles: { [key: string]: React.CSSProperties } = {
   card: {
     backgroundColor: '#112240',
-    padding: '30px',
+    padding: '20px',
     borderRadius: '12px',
+    color: 'white',
     textAlign: 'center',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
   },
   emoji: {
     fontSize: '2rem',
-    marginBottom: '10px',
   },
   title: {
-    fontSize: '1.4rem',
-    fontWeight: 600,
-    marginBottom: '10px',
-    color: '#f0f4f8',
+    fontSize: '1.5rem',
+    margin: '10px 0',
   },
-  description: {
+  desc: {
     fontSize: '1rem',
-    color: '#cbd5e0',
+    color: '#b0bec5',
   },
 };

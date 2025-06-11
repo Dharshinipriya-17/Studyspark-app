@@ -1,51 +1,61 @@
+// app/components/Navbar.tsx
 'use client';
 import Link from 'next/link';
 import React from 'react';
 
-export default function Navbar() {
+type NavbarProps = {
+  showSignIn?: boolean;
+};
+
+export default function Navbar({ showSignIn = true }: NavbarProps) {
   return (
     <nav style={styles.nav}>
       <h1 style={styles.logo}>StudySpark</h1>
-      <div style={styles.links}>
-        <Link href="/" style={styles.link}>Home</Link>
-        <Link href="/features" style={styles.link}>Features</Link>
-        <Link href="/about" style={styles.link}>About</Link>
-        <Link href="/contact" style={styles.link}>Contact</Link>
-        <Link href="/signin" style={styles.signIn}>Sign In</Link>
-      </div>
+      <ul style={styles.navList}>
+        <li><Link href="/" style={styles.navLink}>Home</Link></li>
+        <li><Link href="/features" style={styles.navLink}>Features</Link></li>
+        <li><Link href="/about" style={styles.navLink}>About</Link></li>
+        <li><Link href="/contact" style={styles.navLink}>Contact</Link></li>
+      </ul>
+      {showSignIn && (
+        <Link href="/signin" style={styles.signInButton}>Sign In</Link>
+      )}
     </nav>
   );
 }
 
-const styles: Record<string, React.CSSProperties> = {
+const styles: { [key: string]: React.CSSProperties } = {
   nav: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '20px 40px',
-    background: '#0a192f',
-    borderBottom: '1px solid #1c2c44',
+    borderBottom: '1px solid #64ffda33',
+    backgroundColor: '#0a192f',
   },
   logo: {
     fontSize: '1.8rem',
     fontWeight: 'bold',
     color: '#64ffda',
   },
-  links: {
+  navList: {
+    listStyle: 'none',
     display: 'flex',
-    gap: '25px',
+    gap: '30px',
+    margin: 0,
+    padding: 0,
   },
-  link: {
-    color: '#f0f4f8',
+  navLink: {
+    color: 'white',
     textDecoration: 'none',
-    fontSize: '1rem',
+    fontWeight: '600',
   },
-  signIn: {
-    textDecoration: 'none',
+  signInButton: {
     backgroundColor: '#64ffda',
     color: '#0a192f',
-    padding: '8px 16px',
-    borderRadius: '20px',
+    padding: '10px 20px',
+    borderRadius: '25px',
     fontWeight: 'bold',
+    textDecoration: 'none',
   },
 };
